@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession to Crush</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff6666;
+        }
+        #noAnswer {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Confession to My Crush</h1>
+    <p>Hey [Crush's Name],</p>
+    <p>I like you, can we try to get to know each other?</p>
+    <button id="yesButton" onclick="handleYesClick()">YES</button>
+    <button id="noAnswer">NO</button>
+</div>
+
+<script>
+    // Function to handle clicking the YES button
+    function handleYesClick() {
+        alert("Great! Let's get to know each other better.");
+        // You can add further actions here, such as redirecting to another page or displaying a message.
+    }
+
+    // Function to constantly move the NO button away from the mouse cursor
+    document.addEventListener("mousemove", function(event) {
+        var noButton = document.getElementById("noAnswer");
+        var offset = 50; // Adjust this value to control the distance between the button and the cursor
+        noButton.style.top = (event.clientY + offset) + "px";
+        noButton.style.left = (event.clientX + offset) + "px";
+    });
+</script>
+
+</body>
+</html>
